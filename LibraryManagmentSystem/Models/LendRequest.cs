@@ -9,21 +9,11 @@ namespace LibraryManagmentSystem.Models
         public int LendId { get; set; }
         public string LendStatus { get; set; }
         public DateTime LendDate { get; set; }
-
-        [ForeignKey("UserId")]
         public int UserId { get; set; }
-
-        [ForeignKey("UserName")]
-        public string UserName { get; set; }    
-        
+        [ForeignKey("UserId")]
         public AccountsInfo AccountsInfo { get; set; }
-
+        public int BookId { get; set; }        
         [ForeignKey("BookId")]
-        public int BookId { get; set; }
-
-        [ForeignKey("BookTitle")]
-        public string BookTitle { get; set; }
-        
         public BooksInfo BooksInfo { get; set; }
 
     }
