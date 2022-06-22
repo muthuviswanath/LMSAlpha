@@ -40,7 +40,7 @@ namespace LibraryManagmentSystem.Models
                     AuthorId = 1,
                     PublisherId = 1,
                     Category = "Fiction",
-                    ImageURl = " ",
+                    ImageURl = "/Images/books/b1.png",
                     IsAvailable = true
                 
                 });
@@ -53,7 +53,7 @@ namespace LibraryManagmentSystem.Models
                     AuthorId = 1,
                     PublisherId = 1,
                     Category = "Fiction",
-                    ImageURl = " ",
+                    ImageURl = "/Images/books/b2.png",
                     IsAvailable = true
                 });
             modelBuilder.Entity<BooksInfo>().HasData(
@@ -65,7 +65,7 @@ namespace LibraryManagmentSystem.Models
                     AuthorId = 1,
                     PublisherId = 1,
                     Category = "Fiction",
-                    ImageURl = " ",
+                    ImageURl = "/Images/books/b3.png",
                     IsAvailable = true
                 });
             modelBuilder.Entity<BooksInfo>().HasData(
@@ -77,7 +77,7 @@ namespace LibraryManagmentSystem.Models
                     AuthorId = 1,
                     PublisherId = 1,
                     Category = "Fiction",
-                    ImageURl = " ",
+                    ImageURl = "/Images/books/b4.png",
                     IsAvailable = true
                 });
             modelBuilder.Entity<BooksInfo>().HasData(
@@ -89,7 +89,7 @@ namespace LibraryManagmentSystem.Models
                     AuthorId = 1,
                     PublisherId = 1,
                     Category = "Fiction",
-                    ImageURl = " ",
+                    ImageURl = "/Images/books/b5.png",
                     IsAvailable = true
                 });
             modelBuilder.Entity<BooksInfo>().HasData(
@@ -101,7 +101,7 @@ namespace LibraryManagmentSystem.Models
                     AuthorId = 1,
                     PublisherId = 1,
                     Category = "Fiction",
-                    ImageURl = " ",
+                    ImageURl = "/Images/books/b6.png",
                     IsAvailable = true
                 });
             modelBuilder.Entity<BooksInfo>().HasData(
@@ -113,7 +113,7 @@ namespace LibraryManagmentSystem.Models
                     AuthorId = 1,
                     PublisherId = 1,
                     Category = "Fiction",
-                    ImageURl = " ",
+                    ImageURl = "/Images/books/b7.png",
                     IsAvailable = true
                 });
            

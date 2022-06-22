@@ -20,15 +20,18 @@ namespace LibraryManagmentSystem.Models
 
             }
         }
-
-        public BooksInfo GetBookById(int BookId)
+        public BooksInfo GetBookbyName(string name)
         {
-            return _libraryManagementContext.Books.FirstOrDefault(b=>b.BookId == BookId);
+            return _libraryManagementContext.Books.FirstOrDefault(b => b.BookTitle == name);
         }
 
-       
-
-IEnumerable<BooksInfo> IBooksRepository.GetBooksAvailable => throw new NotImplementedException();
+        public IEnumerable<BooksInfo> GetBooksAvailable
+        {
+            get
+            {
+                return _libraryManagementContext.Books.Include(a => a.AuthorInfo).Include(p => p.PublisherInfo).Where(b => b.IsAvailable);
+            }
+        }
     }
 }
 

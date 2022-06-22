@@ -18,6 +18,7 @@ namespace LibraryManagmentSystem.Models
         public PublisherInfo PublisherInfo { get; set; }
         public string Category { get; set; }
         public string ImageURl { get; set; }
+        public int IssuedBooks { get; set; } = 0;
         public bool IsAvailable { get; set; }
 
     }

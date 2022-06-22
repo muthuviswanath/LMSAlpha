@@ -1,0 +1,11 @@
+﻿@model IEnumerable<LibraryManagmentSystem.Models.BooksInfo>
+
+ <div class="container">
+  <div class="row justify-content-md-center">    
+    @foreach(var book in Model)
+    {
+		<partial name="_BookCard" model="book"/>
+		
+	}
+	</div>
+	</div>
