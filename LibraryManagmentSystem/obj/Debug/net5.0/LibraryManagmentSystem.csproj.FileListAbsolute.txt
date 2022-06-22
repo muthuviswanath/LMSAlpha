@@ -53,7 +53,6 @@ E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\staticwebassets\Libra
 E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\LibraryManagmentSystem.TagHelpers.input.cache
 E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\LibraryManagmentSystem.TagHelpers.output.cache
 E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\LibraryManagmentSystem.RazorCoreGenerate.cache
-E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\Books\Index.cshtml.g.cs
 E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\LibraryManagmentSystem.RazorTargetAssemblyInfo.cache
 E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\LibraryManagmentSystem.RazorTargetAssemblyInfo.cs
 E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\LibraryManagmentSystem.Views.pdb

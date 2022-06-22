@@ -14,12 +14,6 @@ namespace LibraryManagmentSystem.Controllers
             _authorRepository = authorRepository;
             _publisherRepository = publisherRepository;
         }
-
-        public IActionResult Index()
-        {
-
-            return View();
-        }
         public IActionResult AllBooksList()
         {
             return View(_booksRepository.GetAllBooks);
