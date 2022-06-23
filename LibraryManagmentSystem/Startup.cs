@@ -11,6 +11,7 @@ using LibraryManagmentSystem.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace LibraryManagmentSystem
 {
@@ -27,9 +28,13 @@ namespace LibraryManagmentSystem
         {
             services.AddMvc();
             services.AddControllersWithViews();
+            services.AddSession();
+            services.AddHttpContextAccessor();
             services.AddScoped<IBooksRepository, BooksRepository>();
             services.AddScoped<IAuthorRepository, AuthorRepository>();
             services.AddScoped<IPublisherRepository, PublisherRepository>();
+            services.AddScoped<ILendRequestRepository, LendRequestRepository>();
+            //services.AddScoped<BookRequestStatus>(br => BookRequestStatus.RequestList(br));
             services.AddDbContext<LibraryManagementContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
@@ -46,6 +51,7 @@ namespace LibraryManagmentSystem
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

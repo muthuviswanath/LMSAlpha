@@ -11,9 +11,19 @@ namespace LibraryManagmentSystem.Models
         public DbSet<AuthorInfo> Authors { get; set; }
         public DbSet<PublisherInfo> Publishers { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<AccountsInfo>().HasData(
+                new AccountsInfo
+                {
+                    UserId=1,
+                    UserName="Team Alpha",
+                    Password="alpha",
+                    Role ="Student"
+                });
 
             modelBuilder.Entity<AuthorInfo>().HasData(
                 new AuthorInfo
@@ -116,7 +126,6 @@ namespace LibraryManagmentSystem.Models
                     ImageURl = "/Images/books/b7.png",
                     IsAvailable = true
                 });
-           
         }
         
     }

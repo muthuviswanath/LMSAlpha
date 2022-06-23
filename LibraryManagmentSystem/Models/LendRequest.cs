@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System;
 namespace LibraryManagmentSystem.Models
@@ -13,9 +14,10 @@ namespace LibraryManagmentSystem.Models
         public int UserId { get; set; }
         [ForeignKey("UserId")]
         public AccountsInfo AccountsInfo { get; set; }
-        public int BookId { get; set; }        
+        public int BookId { get; set; }
         [ForeignKey("BookId")]
         public BooksInfo BooksInfo { get; set; }
 
     }
 }
+

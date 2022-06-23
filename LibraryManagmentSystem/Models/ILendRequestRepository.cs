@@ -1,0 +1,10 @@
+﻿using System.Collections.Generic;
+
+namespace LibraryManagmentSystem.Models
+{
+    public interface ILendRequestRepository
+    {
+        IEnumerable<LendRequest> GetAllLendRequest { get; }
+        IEnumerable<LendRequest> GetlendRequestbyId(int Id);
+    }
+}

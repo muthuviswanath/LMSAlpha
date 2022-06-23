@@ -15,8 +15,7 @@ namespace LibraryManagmentSystem.Models
         {
             get 
             {
-                return _libraryManagementContext.Books.Include(a => a.AuthorInfo).Include(p => p.PublisherInfo);
-                           
+                return _libraryManagementContext.Books.Include(a => a.AuthorInfo).Include(p => p.PublisherInfo);      
 
             }
         }

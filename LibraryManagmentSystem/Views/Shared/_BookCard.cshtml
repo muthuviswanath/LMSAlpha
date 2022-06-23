@@ -6,7 +6,10 @@
 			<div class="card-text">No. of Copies Available : @(@Model.NoOfCopies - @Model.IssuedBooks)<br/>
 				Author : @Model.AuthorInfo.AuthorName<br/>
 				Category : @Model.Category<br/>
-				<button class="RequestToLent">Request to Lent</button>
+				<form asp-controller="LendRequest" asp-action="RequestToLend" asp-route-bookId="@Model.BookId">
+				<button class="RequestToLent"  >Request to Lent</button>
+				</form>
+				
 			</div>
 		  </div>
 		</div>
