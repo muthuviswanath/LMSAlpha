@@ -28,6 +28,12 @@ namespace LibraryManagmentSystem.Models
         {
             return _libraryManagementContext.LendRequests.Include(b => b.BooksInfo).FirstOrDefault(l=> l.LendId == LendId);
         }
-        
+        public IEnumerable<LendRequest> GetAllApprovedBooksList
+        {
+            get
+            {
+                return _libraryManagementContext.LendRequests.Include(b => b.BooksInfo).Where(l => l.LendStatus == "Approved");
+            }
+        }
     }
 }

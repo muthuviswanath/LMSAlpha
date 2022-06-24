@@ -61,6 +61,7 @@ namespace LibraryManagmentSystem.Controllers
             System.DateTime Date = System.DateTime.Now;
             lendRequest.BooksInfo.IssuedBooks++;
             lendRequest.ReturnDate = Date.AddDays(15);
+           
             _libraryManagementContext.SaveChanges();
             ViewData["Message"] = "Request Approved !!!";
             return RedirectToAction("AllLendRequest");
@@ -108,5 +109,17 @@ namespace LibraryManagmentSystem.Controllers
             }
             return View(request);
         }
+        public IActionResult LentList()
+        {
+
+            var lendList = _lendRequestRepository.GetAllApprovedBooksList;
+
+            if (lendList == null)
+            {
+                return NotFound();
+            }
+            return View(lendList);
+        }
+
     }
 }
