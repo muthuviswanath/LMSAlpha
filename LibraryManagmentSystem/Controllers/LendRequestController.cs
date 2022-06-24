@@ -41,6 +41,7 @@ namespace LibraryManagmentSystem.Controllers
                 LendStatus = "Requested",
                 UserId = userId,
                 BookId = bookId,
+                LendDate = System.DateTime.MinValue,
                 AccountsInfo = _libraryManagementContext.Accounts.SingleOrDefault(u => u.UserId == userId),
                 BooksInfo = _libraryManagementContext.Books.SingleOrDefault(b=>b.BookId == bookId)
             }; 
@@ -48,6 +49,25 @@ namespace LibraryManagmentSystem.Controllers
             _libraryManagementContext.LendRequests.Add(lendRequest);
             _libraryManagementContext.SaveChanges();
             return View();
+        }
+        public RedirectToActionResult Approval(int lendId) 
+        {
+            LendRequest lendRequest = _lendRequestRepository.GetLendRequestByLendId(lendId);
+            lendRequest.LendStatus = "Approved";
+            lendRequest.LendDate = System.DateTime.Now;
+            lendRequest.ReturnDate = System.DateTime.Now;
+            lendRequest.ReturnDate.AddDays(15);
+            _libraryManagementContext.SaveChanges();
+            return RedirectToAction("AllLendRequest");
+        }
+        public RedirectToActionResult Decline(int lendId)
+        {
+            LendRequest lendRequest = _lendRequestRepository.GetLendRequestByLendId(lendId);
+            lendRequest.LendStatus = "Declined";
+            lendRequest.LendDate = System.DateTime.Now;
+            lendRequest.ReturnDate = System.DateTime.Now;
+            _libraryManagementContext.SaveChanges();
+            return RedirectToAction("AllLendRequest");
         }
     }
 }

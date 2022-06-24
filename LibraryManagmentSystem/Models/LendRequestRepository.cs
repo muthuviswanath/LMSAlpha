@@ -24,5 +24,9 @@ namespace LibraryManagmentSystem.Models
         {
             return _libraryManagementContext.LendRequests.Where(u => u.UserId == Id);
         }
+        public LendRequest GetLendRequestByLendId(int LendId)
+        {
+            return _libraryManagementContext.LendRequests.FirstOrDefault(l=> l.LendId == LendId);
+        }
     }
 }

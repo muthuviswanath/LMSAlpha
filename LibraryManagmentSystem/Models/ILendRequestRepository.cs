@@ -6,5 +6,6 @@ namespace LibraryManagmentSystem.Models
     {
         IEnumerable<LendRequest> GetAllLendRequest { get; }
         IEnumerable<LendRequest> GetlendRequestbyId(int Id);
+        public LendRequest GetLendRequestByLendId (int LendId);
     }
 }

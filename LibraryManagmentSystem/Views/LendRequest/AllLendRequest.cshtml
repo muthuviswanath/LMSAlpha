@@ -39,8 +39,16 @@
                                         <td>@request.BookId</td>
                                         <td>@request.BooksInfo.BookTitle</td>
                                         <td>@request.LendStatus</td>
-                                        <td><button>Approve</button></td>
-                                        <td><button>Decline</button></td>
+                                        <td>
+                                            <form asp-controller="LendRequest" asp-action="Approval" asp-route-lendId="@request.LendId">
+                                            <button>Approve</button>
+                                            </form>
+                                        </td>
+                                        <td>
+                                            <form asp-controller="LendRequest" asp-action="Decline" asp-route-lendId="@request.LendId">
+                                            <button>Decline</button>
+                                            </form>
+                                        </td>
                                     </tr>
                                 }
                         </tbody>
