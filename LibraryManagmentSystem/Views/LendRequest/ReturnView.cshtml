@@ -1,0 +1,69 @@
+﻿
+@model IEnumerable<LibraryManagmentSystem.Models.LendRequest>
+ <div class="container">
+  <div class="row justify-content-md-center"> 
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           <h4> Approved Book List </h4>
+                        </center>
+                     </div>
+                  </div>
+                        <div class="row">
+                     <div class="col">
+                        <hr>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <table class="table table-striped table-bordered" >
+                            <thead>
+                                <tr>
+                                <td>Lend Id </td>
+                                <td>Book Id</td>
+                                <td>Book Name</td>
+                                <td>Lend Date</td>
+                                <td>Return Date</td>
+                                <td>Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var list in Model)
+                                {
+                                    <tr>
+                                        <td>@list.LendId</td>
+                                        <td>@list.BookId</td>
+                                        <td>@list.BooksInfo.BookTitle</td>
+                                        <td>@list.LendDate</td>
+                                        <td>@list.ReturnDate</td>
+                                        
+                                        <td>
+                                        @if(list.LendStatus == "Approved"){
+                                           
+                                            <form asp-controller="LendRequest" asp-action="ReturnBook" asp-route-lendId="@list.LendId">
+                                            <button>Return Book</button>
+                                            </form>
+                                               
+                                            }
+                                            else
+                                            {
+                                               @list.LendStatus
+                                            }
+                                        </td>
+                                     </tr>
+                                }
+                                
+
+                                     
+                        </tbody>
+                        </table>
+                     </div>
+                  </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

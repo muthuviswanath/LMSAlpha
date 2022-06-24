@@ -87,3 +87,5 @@ E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\Publisher
 E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\PublisherInfoes\Edit.cshtml.g.cs
 E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\PublisherInfoes\Index.cshtml.g.cs
 E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\LendRequest\ReturnView.cshtml.g.cs
+E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\LendRequest\AllPastBooks.cshtml.g.cs

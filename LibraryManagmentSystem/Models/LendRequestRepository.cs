@@ -17,12 +17,16 @@ namespace LibraryManagmentSystem.Models
         {
             get
             {
-                return _libraryManagementContext.LendRequests.Include(b=>b.BooksInfo);
+                return _libraryManagementContext.LendRequests.Include(b=>b.BooksInfo).Where(l=>l.LendStatus == "Requested");
             }
         }
         public IEnumerable<LendRequest> GetlendRequestbyId(int Id)
         {
-            return _libraryManagementContext.LendRequests.Where(u => u.UserId == Id);
+            return _libraryManagementContext.LendRequests.Include(b => b.BooksInfo).Where(u => u.UserId == Id);
+        }
+        public LendRequest GetLendRequestByLendId(int LendId)
+        {
+            return _libraryManagementContext.LendRequests.FirstOrDefault(l=> l.LendId == LendId);
         }
     }
 }

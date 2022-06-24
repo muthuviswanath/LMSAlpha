@@ -42,17 +42,11 @@
               </ul>
               <ul class="navbar-nav">
                   <li class="nav-item ">
-                      <a asp-controller="LendRequest" asp-action="AllLendRequest" class="nav-link active ">Admin Lend Request</a>
+                      <a asp-controller="LendRequest" asp-action="AllPastBooks" asp-route-Userid=1  class="nav-link active ">All PastBooks</a>
                     </li>
                   <li class="nav-item ">
-                      <a asp-controller="BooksInfoes" asp-action="Index" class="nav-link active ">CRUD Books</a>
-                    </li>
-                    <li class="nav-item ">
-                      <a asp-controller="AuthorInfoes" asp-action="Index" class="nav-link active ">Authors List</a>
-                    </li>
-                    <li class="nav-item ">
-                      <a asp-controller="PublisherInfoes" asp-action="Index" class="nav-link active ">Publishers List</a>
-                    </li>
+                      <a asp-controller="LendRequest" asp-action="ReturnView" asp-route-Userid=1  class="nav-link active ">Book Return</a>
+                    </li>                  
                     <li class="nav-item ">
                       <a asp-controller="Books" asp-action="AllBooksList" class="nav-link active ">View Books</a>
                     </li>
@@ -81,10 +75,31 @@
         <br/>
       
         @RenderBody()
+        <br/>
+        <br/>
     </div>
     
     <!-- Footer -->
         <footer>
+            
+              <div id="footer1" class="container-fluid">
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                  </div>
+              </div>
+             <p>
+                 <center>
+                 <a asp-controller="AuthorInfoes" asp-action="Index" class="footerlinks">Authors Management</a>
+                 &nbsp;&nbsp;
+                 <a asp-controller="PublisherInfoes" asp-action="Index" class="footerlinks">Publishers Management</a>
+                 &nbsp;&nbsp;
+                <a asp-controller="BooksInfoes" asp-action="Index" class="footerlinks">Book Inventory</a>
+                 &nbsp&nbsp;
+                 <a asp-controller="LendRequest" asp-action="AllLendRequest" class="footerlinks">Book Issuing</a>
+                 &nbsp&nbsp;
+                 <a asp-controller="" asp-action="" class="footerlinks">User Management</a>
+                 </center>
+             </p>
            
 
            <div id="footer2"class="container-fluid">
