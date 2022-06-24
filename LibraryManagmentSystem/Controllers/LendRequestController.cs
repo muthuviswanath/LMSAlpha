@@ -58,16 +58,10 @@ namespace LibraryManagmentSystem.Controllers
             LendRequest lendRequest = _lendRequestRepository.GetLendRequestByLendId(lendId);
             lendRequest.LendStatus = "Approved";
             lendRequest.LendDate = System.DateTime.Now;
-<<<<<<< HEAD
             System.DateTime Date = System.DateTime.Now;
             lendRequest.ReturnDate = Date.AddDays(15);
             _libraryManagementContext.SaveChanges();
             ViewData["Message"] = "Request Approved !!!";
-=======
-            lendRequest.ReturnDate = System.DateTime.Now;
-            lendRequest.ReturnDate.AddDays(15);
-            _libraryManagementContext.SaveChanges();
->>>>>>> 6f0c36fa761d618e1ecc9147d5b134996bd29707
             return RedirectToAction("AllLendRequest");
         }
         public RedirectToActionResult Decline(int lendId)
@@ -77,7 +71,6 @@ namespace LibraryManagmentSystem.Controllers
             lendRequest.LendDate = System.DateTime.Now;
             lendRequest.ReturnDate = System.DateTime.Now;
             _libraryManagementContext.SaveChanges();
-<<<<<<< HEAD
             ViewData["Message"] = "Request Declined !!!";
             return RedirectToAction("AllLendRequest");
         }
@@ -113,10 +106,5 @@ namespace LibraryManagmentSystem.Controllers
             }
             return View(request);
         }
-
-=======
-            return RedirectToAction("AllLendRequest");
-        }
->>>>>>> 6f0c36fa761d618e1ecc9147d5b134996bd29707
     }
 }
