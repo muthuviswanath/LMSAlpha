@@ -18,5 +18,9 @@ namespace LibraryManagmentSystem.Controllers
         {
             return View(_booksRepository.GetAllBooks);
         }
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { IsBookAvailable = false });
+        }
     }
 }
