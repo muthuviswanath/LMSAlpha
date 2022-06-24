@@ -1,0 +1,19 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+<style>
+	a,h1,h3{
+		color: red;
+		text-decoration: none;
+	}
+</style>
+  <center>
+@if(@Model.IsBookAvailable==false)
+{
+<h1>Sorry,</h1>
+<h3>This book is unavailable :( <br/>
+	While you wait, you can read <a asp-controller="Books" asp-action="AllBooksList">these.</a>
+</h3>
+}
+</center>
