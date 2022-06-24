@@ -57,7 +57,7 @@ namespace LibraryManagmentSystem
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{Controller=Books}/{action=AllBooksList}/{id?}"
+                    pattern: "{Controller=Home}/{action=Index}/{id?}"
                     );
             });
         }

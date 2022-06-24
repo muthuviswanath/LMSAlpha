@@ -20,7 +20,7 @@
     <!-- Header -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a asp-controller="Home" asp-action="Index" class="navbar-brand" >
                 <img src="~/Images/imgs/books.png" width="30" height="30"/>
                 E-Library
             </a>
@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a asp-controller="Home" asp-action="Index" class="nav-link active" aria-current="page" >Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="#">About Us</a>
@@ -103,7 +103,7 @@
               
                  </center>
              </p>
-           
+           </div>
 
            <div id="footer2"class="container-fluid">
                 <div class="row">

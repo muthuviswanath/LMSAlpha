@@ -181,3 +181,6 @@ C:\Users\krishna mohan\Source\Repos\muthuviswanath\LMSAlpha\LibraryManagmentSyst
 C:\Users\krishna mohan\Source\Repos\muthuviswanath\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\LibraryManagmentSystem.genruntimeconfig.cache
 C:\Users\krishna mohan\Source\Repos\muthuviswanath\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\ref\LibraryManagmentSystem.dll
 C:\Users\krishna mohan\Source\Repos\muthuviswanath\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\Shared\LentList.cshtml.g.cs
+E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\Shared\LentList.cshtml.g.cs
+E:\github\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
