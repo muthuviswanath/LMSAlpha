@@ -59,6 +59,7 @@ namespace LibraryManagmentSystem.Controllers
             lendRequest.LendStatus = "Approved";
             lendRequest.LendDate = System.DateTime.Now;
             System.DateTime Date = System.DateTime.Now;
+            lendRequest.BooksInfo.IssuedBooks++;
             lendRequest.ReturnDate = Date.AddDays(15);
             _libraryManagementContext.SaveChanges();
             ViewData["Message"] = "Request Approved !!!";
@@ -89,6 +90,7 @@ namespace LibraryManagmentSystem.Controllers
         {
             LendRequest lendRequest = _lendRequestRepository.GetLendRequestByLendId(lendId);
             lendRequest.LendStatus = "Returned";
+            lendRequest.BooksInfo.IssuedBooks--;
 
             _libraryManagementContext.SaveChanges();
             ViewData["Message"] = "Book Returned !!!";

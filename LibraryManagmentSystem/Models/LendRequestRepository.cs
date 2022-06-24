@@ -26,7 +26,7 @@ namespace LibraryManagmentSystem.Models
         }
         public LendRequest GetLendRequestByLendId(int LendId)
         {
-            return _libraryManagementContext.LendRequests.FirstOrDefault(l=> l.LendId == LendId);
+            return _libraryManagementContext.LendRequests.Include(b => b.BooksInfo).FirstOrDefault(l=> l.LendId == LendId);
         }
         
     }
