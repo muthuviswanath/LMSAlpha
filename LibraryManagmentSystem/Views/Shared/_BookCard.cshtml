@@ -7,7 +7,14 @@
 				Author : @Model.AuthorInfo.AuthorName<br/>
 				Category : @Model.Category<br/>
 				<form asp-controller="LendRequest" asp-action="RequestToLend" asp-route-bookId="@Model.BookId">
-				<button class="RequestToLent"  >Request to Lent</button>
+				@if(@Model.NoOfCopies - @Model.IssuedBooks == 0)
+				{
+					<button class="RequestToLent" asp-controller="Books" asp-action="Error">Request to Borrow</button>
+				}
+				else
+				{
+					<button class="RequestToLent">Request to Borrow</button>
+				}
 				</form>
 				
 			</div>
