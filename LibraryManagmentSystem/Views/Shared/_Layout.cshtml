@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>@ViewBag.Title</title>
+    <!-- site.css -->
+    <link rel="stylesheet" href="~/css/site.css"/>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css"/>
+    <!-- Bootstrap js-->
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Jquery -->
+    <script src="~/lib/jquery/jquery.min.js"></script>
+   
+
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a asp-controller="Home" asp-action="Index" class="navbar-brand" >
+                <img src="~/Images/imgs/books.png" width="30" height="30"/>
+                E-Library
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a asp-controller="Home" asp-action="Index" class="nav-link active" aria-current="page" >Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Terms</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+                  <li class="nav-item ">
+                      <a asp-controller="LendRequest" asp-action="AllPastBooks" asp-route-Userid=1  class="nav-link active ">All PastBooks</a>
+                    </li>
+                  <li class="nav-item ">
+                      <a asp-controller="LendRequest" asp-action="ReturnView" asp-route-Userid=1  class="nav-link active ">Book Return</a>
+                    </li>                  
+                    <li class="nav-item ">
+                      <a asp-controller="Books" asp-action="AllBooksList" class="nav-link active ">View Books</a>
+                    </li>
+                    
+                    <li class="nav-item ">
+                      <a asp-controller="LendRequest" asp-action="LendRequestById" asp-route-Userid=1 class="nav-link active ">User Lend Request</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Hello, User</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Logout</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      
+        @RenderBody()
+        <br/>
+        <br/>
+    </div>
+    
+    <!-- Footer -->
+        <footer>
+            
+              <div id="footer1" class="container-fluid">
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                  </div>
+              </div>
+             <p>
+                 <center>
+                 <a asp-controller="AuthorInfoes" asp-action="Index" class="footerlinks">Authors Management</a>
+                 &nbsp;&nbsp;
+                 <a asp-controller="PublisherInfoes" asp-action="Index" class="footerlinks">Publishers Management</a>
+                 &nbsp;&nbsp;
+                 <a asp-controller="BooksInfoes" asp-action="Index" class="footerlinks">Book Inventory</a>
+                 &nbsp&nbsp;
+                 <a asp-controller="LendRequest" asp-action="AllLendRequest" class="footerlinks">Book Issuing</a>
+                 &nbsp&nbsp;
+                 <a asp-controller="LendRequest" asp-action="LentList"  class="footerlinks">Admin LentbookList</a>
+                 &nbsp&nbsp;
+                 <a asp-controller="AccountsInfoes" asp-action="Index" class="footerlinks">User Management</a>
+              
+                 </center>
+             </p>
+           </div>
+
+           <div id="footer2"class="container-fluid">
+                <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                          <p style="color:whitesmoke">&copy All right Reversed.&nbsp;<a
+                           class="footerlinks"href="#"target="_blank">Team Alpha </a></p>
+                     </div>
+                </div>
+           </div>
+        </footer>
+       @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
