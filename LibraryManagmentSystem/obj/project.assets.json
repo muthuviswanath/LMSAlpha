@@ -7103,23 +7103,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Varsha KeshavaPrasad\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\VARSHA KESHAVA PRASAD\\WIPRO\\VELOCITY\\Project\\AAAAALMSMoooooooost\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
+      "projectUniqueName": "E:\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
       "projectName": "LibraryManagmentSystem",
-      "projectPath": "E:\\VARSHA KESHAVA PRASAD\\WIPRO\\VELOCITY\\Project\\AAAAALMSMoooooooost\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
-      "packagesPath": "C:\\Users\\Varsha KeshavaPrasad\\.nuget\\packages\\",
-      "outputPath": "E:\\VARSHA KESHAVA PRASAD\\WIPRO\\VELOCITY\\Project\\AAAAALMSMoooooooost\\LibraryManagmentSystem\\obj\\",
+      "projectPath": "E:\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "E:\\LMSAlpha\\LibraryManagmentSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Varsha KeshavaPrasad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7185,12 +7187,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.17, 5.0.17]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7199,7 +7195,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

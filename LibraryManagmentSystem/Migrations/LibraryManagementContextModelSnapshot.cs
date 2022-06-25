@@ -71,6 +71,66 @@ namespace LibraryManagmentSystem.Migrations
                         {
                             AuthorId = 1,
                             AuthorName = "JK Rowling"
+                        },
+                        new
+                        {
+                            AuthorId = 2,
+                            AuthorName = "Joseph Murphy"
+                        },
+                        new
+                        {
+                            AuthorId = 3,
+                            AuthorName = "Dale Carnegie"
+                        },
+                        new
+                        {
+                            AuthorId = 4,
+                            AuthorName = "Martin Dunkerton"
+                        },
+                        new
+                        {
+                            AuthorId = 5,
+                            AuthorName = "Mark Manson"
+                        },
+                        new
+                        {
+                            AuthorId = 6,
+                            AuthorName = "Amit Ghule"
+                        },
+                        new
+                        {
+                            AuthorId = 7,
+                            AuthorName = "Arthur Conan Doyle"
+                        },
+                        new
+                        {
+                            AuthorId = 8,
+                            AuthorName = "Alice Walker"
+                        },
+                        new
+                        {
+                            AuthorId = 9,
+                            AuthorName = "Ralph Ellison"
+                        },
+                        new
+                        {
+                            AuthorId = 10,
+                            AuthorName = "J. R. R. Tolkien"
+                        },
+                        new
+                        {
+                            AuthorId = 11,
+                            AuthorName = "Rebecca Serle"
+                        },
+                        new
+                        {
+                            AuthorId = 12,
+                            AuthorName = "Tana French"
+                        },
+                        new
+                        {
+                            AuthorId = 13,
+                            AuthorName = "Harper Lee"
                         });
                 });
 
@@ -197,6 +257,150 @@ namespace LibraryManagmentSystem.Migrations
                             IssuedBooks = 0,
                             NoOfCopies = 8,
                             PublisherId = 1
+                        },
+                        new
+                        {
+                            BookId = 8,
+                            AuthorId = 2,
+                            BookTitle = "The Power of Your Subconscious Mind",
+                            Category = "Self-Help",
+                            ImageURl = "/Images/books/b8.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 15,
+                            PublisherId = 2
+                        },
+                        new
+                        {
+                            BookId = 9,
+                            AuthorId = 3,
+                            BookTitle = "How to Win Friends and Influence People",
+                            Category = "Self-Help",
+                            ImageURl = "/Images/books/b9.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 4,
+                            PublisherId = 2
+                        },
+                        new
+                        {
+                            BookId = 10,
+                            AuthorId = 4,
+                            BookTitle = "Think and Grow Rich",
+                            Category = "Self-Help",
+                            ImageURl = "/Images/books/b10.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 10,
+                            PublisherId = 2
+                        },
+                        new
+                        {
+                            BookId = 11,
+                            AuthorId = 5,
+                            BookTitle = "The Subtle Art of Not Giving a F*ck",
+                            Category = "Self-Help",
+                            ImageURl = "/Images/books/b11.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 5,
+                            PublisherId = 3
+                        },
+                        new
+                        {
+                            BookId = 12,
+                            AuthorId = 6,
+                            BookTitle = "Past Forward",
+                            Category = "Contemporary romance",
+                            ImageURl = "/Images/books/b12.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 12,
+                            PublisherId = 4
+                        },
+                        new
+                        {
+                            BookId = 13,
+                            AuthorId = 7,
+                            BookTitle = "The Adventures of Sherlock Holmes",
+                            Category = "Fiction",
+                            ImageURl = "/Images/books/b13.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 23,
+                            PublisherId = 5
+                        },
+                        new
+                        {
+                            BookId = 15,
+                            AuthorId = 9,
+                            BookTitle = "Invisible Man",
+                            Category = "Novel",
+                            ImageURl = "/Images/books/b15.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 34,
+                            PublisherId = 7
+                        },
+                        new
+                        {
+                            BookId = 14,
+                            AuthorId = 8,
+                            BookTitle = "The Color Purple",
+                            Category = "Epistolary novel",
+                            ImageURl = "/Images/books/b14.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 15,
+                            PublisherId = 6
+                        },
+                        new
+                        {
+                            BookId = 16,
+                            AuthorId = 10,
+                            BookTitle = "The Lord of the Rings",
+                            Category = "High fantasy Adventure",
+                            ImageURl = "/Images/books/b16.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 12,
+                            PublisherId = 8
+                        },
+                        new
+                        {
+                            BookId = 17,
+                            AuthorId = 11,
+                            BookTitle = "One Italian Summer",
+                            Category = "Domestic Fiction",
+                            ImageURl = "/Images/books/b17.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 16,
+                            PublisherId = 9
+                        },
+                        new
+                        {
+                            BookId = 18,
+                            AuthorId = 12,
+                            BookTitle = "In the Woods",
+                            Category = "Mystery",
+                            ImageURl = "/Images/books/b18.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 30,
+                            PublisherId = 10
+                        },
+                        new
+                        {
+                            BookId = 19,
+                            AuthorId = 13,
+                            BookTitle = "To Kill a Mockingbird",
+                            Category = "Southern Gothic Fiction",
+                            ImageURl = "/Images/books/b19.png",
+                            IsAvailable = true,
+                            IssuedBooks = 0,
+                            NoOfCopies = 19,
+                            PublisherId = 11
                         });
                 });
 
@@ -253,6 +457,56 @@ namespace LibraryManagmentSystem.Migrations
                         {
                             PublisherId = 1,
                             PublisherName = "Bloomsbury Publishing"
+                        },
+                        new
+                        {
+                            PublisherId = 2,
+                            PublisherName = "Simon & Schuster"
+                        },
+                        new
+                        {
+                            PublisherId = 3,
+                            PublisherName = "HarperOne"
+                        },
+                        new
+                        {
+                            PublisherId = 4,
+                            PublisherName = "Notion Press"
+                        },
+                        new
+                        {
+                            PublisherId = 5,
+                            PublisherName = "George Newnes"
+                        },
+                        new
+                        {
+                            PublisherId = 6,
+                            PublisherName = "Harcourt Brace Jovanovich"
+                        },
+                        new
+                        {
+                            PublisherId = 7,
+                            PublisherName = "Random House"
+                        },
+                        new
+                        {
+                            PublisherId = 8,
+                            PublisherName = "Allen & Unwin"
+                        },
+                        new
+                        {
+                            PublisherId = 9,
+                            PublisherName = "Simon & Schuster"
+                        },
+                        new
+                        {
+                            PublisherId = 10,
+                            PublisherName = "Viking Adult"
+                        },
+                        new
+                        {
+                            PublisherId = 11,
+                            PublisherName = "J. B. Lippincott & Co."
                         });
                 });
 
