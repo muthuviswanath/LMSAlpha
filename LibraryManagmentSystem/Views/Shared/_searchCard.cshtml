@@ -1,0 +1,24 @@
+﻿@model BooksInfo
+<div class="column col col-lg-3 col-md-3 col-sm-3">
+		<div class="card" style="width: 15rem; height:min-content;">
+		  <img class="card-img-top" src="@Model.ImageURl" alt="@Model.BookTitle"/>
+		  <div class="card-body">
+			<div class="card-text">
+				<b style="font-family:'Gill Sans'">@Model.BookTitle</b><br />
+				No. of Copies Available : @(@Model.NoOfCopies - @Model.IssuedBooks)<br/>				
+				Category : @Model.Category<br/>
+				<form asp-controller="LendRequest" asp-action="RequestToLend" asp-route-bookId="@Model.BookId">
+				@if(@Model.NoOfCopies - @Model.IssuedBooks == 0)
+				{
+					<button class="RequestToLent" asp-controller="Books" asp-action="Error">Request to Borrow</button>
+				}
+				else
+				{
+					<button class="RequestToLent">Request to Borrow</button>
+				}
+				</form>
+				
+			</div>
+		  </div>
+		</div>
+		</div>
