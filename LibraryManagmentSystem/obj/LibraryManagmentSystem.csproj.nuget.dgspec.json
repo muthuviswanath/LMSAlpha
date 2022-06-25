@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\github\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj": {}
+    "C:\\Users\\muthu\\Desktop\\LMSAlpha\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj": {}
   },
   "projects": {
-    "E:\\github\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj": {
+    "C:\\Users\\muthu\\Desktop\\LMSAlpha\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\github\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
+        "projectUniqueName": "C:\\Users\\muthu\\Desktop\\LMSAlpha\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
         "projectName": "LibraryManagmentSystem",
-        "projectPath": "E:\\github\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "E:\\github\\LMSAlpha\\LibraryManagmentSystem\\obj\\",
+        "projectPath": "C:\\Users\\muthu\\Desktop\\LMSAlpha\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
+        "packagesPath": "C:\\Users\\muthu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\muthu\\Desktop\\LMSAlpha\\LMSAlpha\\LibraryManagmentSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\muthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
