@@ -1,0 +1,22 @@
+﻿@{
+	Layout="_userLayout";
+}
+@model IEnumerable<LibraryManagmentSystem.Models.BooksInfo>
+
+	<form asp-controller="Books" asp-action="Search">
+<div class="input-group mb-3" style="float:right;">
+    <input type="text" class="form-control" placeholder="Search Here" aria-label="Recipient's username" aria-describedby="basic-addon2" name="SearchString">
+    <button type="submit" class="input-group-text" id="basic-addon2">Search</button>
+</div>
+</form>
+
+
+ <div class="container">
+  <div class="row justify-content-md-center">    
+    @foreach(var book in Model)
+    {
+		<partial name="_searchCard" model="book"/>
+		
+	}
+	</div>
+	</div>
