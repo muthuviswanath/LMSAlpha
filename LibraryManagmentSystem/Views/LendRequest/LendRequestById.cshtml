@@ -11,7 +11,14 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <h4>User's Requested Book List</h4>
+                           <h4>Your all records</h4>
+                        </center>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           <img width="100px" src="~/Images/imgs/books.png" />
                         </center>
                      </div>
                   </div>
@@ -29,6 +36,7 @@
                                     <td>Lend Id </td>
                                     <td>User Name </td>
                                     <td>Book Name</td>
+                                    <td>Fine Amount</td>
                                     <td>Status</td>
                                 </tr>
                             </thead>
@@ -39,6 +47,7 @@
                                         <td>@request.LendId</td>
                                         <td>@request.AccountsInfo.UserName</td>
                                         <td>@request.BooksInfo.BookTitle</td>
+                                        <td> @request.FineAmount</td>
                                         <td>@request.LendStatus</td>
                                     </tr>
                                 }
