@@ -59,18 +59,18 @@ namespace LibraryManagmentSystem.Controllers
                 {
                     HttpContext.Session.SetString("username", uname);
                     return RedirectToAction("AllBooksList", "Books");
-                    //return View("Search");
+                    
                 }
                 else
                 {
                     ViewBag.error = "Invalid Credentials. Check again.";
-                    return View("Index");
+                    return View("Login");
                 }
             }
             else
             {
-                ViewBag.error = "Invalid Credentials. Check again.";
-                return View("Index");
+                ViewBag.error = "Please enter your credentials.";
+                return View("Login");
             }
 
         }
