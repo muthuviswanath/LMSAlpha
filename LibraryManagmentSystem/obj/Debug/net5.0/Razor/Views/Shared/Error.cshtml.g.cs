@@ -19,8 +19,15 @@ using LibraryManagmentSystem.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "E:\LMSAlpha\LibraryManagmentSystem\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Http;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f157f42ea097d723fc16fd3b01b0b3d44d6179aa", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8fc1187f0828b3657e34845ad9b7c89383f04e7c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"06ed63fcf584b27fa2d42a455dd3bf05997e2746", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     #nullable disable
@@ -69,7 +76,7 @@ using LibraryManagmentSystem.Models;
 #line hidden
 #nullable disable
             WriteLiteral("<h1>Sorry,</h1>\r\n<h3>This book is unavailable :( <br/>\r\n\tWhile you wait, you can read ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f157f42ea097d723fc16fd3b01b0b3d44d6179aa4115", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f157f42ea097d723fc16fd3b01b0b3d44d6179aa4290", async() => {
                 WriteLiteral("these.");
             }
             );

@@ -19,8 +19,15 @@ using LibraryManagmentSystem.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "E:\LMSAlpha\LibraryManagmentSystem\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Http;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8b041791082e18a768f3b9dcfd5073ba709b305c", @"/Views/Books/Search.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8fc1187f0828b3657e34845ad9b7c89383f04e7c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"06ed63fcf584b27fa2d42a455dd3bf05997e2746", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Books_Search : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<LibraryManagmentSystem.Models.BooksInfo>>
     #nullable disable
@@ -63,7 +70,7 @@ using LibraryManagmentSystem.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8b041791082e18a768f3b9dcfd5073ba709b305c4317", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8b041791082e18a768f3b9dcfd5073ba709b305c4492", async() => {
                 WriteLiteral(@"
 <div class=""input-group mb-3"" style=""float:right;"">
     <input type=""text"" class=""form-control"" placeholder=""Search Here"" aria-label=""Recipient's username"" aria-describedby=""basic-addon2"" name=""SearchString"">
@@ -97,7 +104,7 @@ using LibraryManagmentSystem.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8b041791082e18a768f3b9dcfd5073ba709b305c6588", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8b041791082e18a768f3b9dcfd5073ba709b305c6763", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

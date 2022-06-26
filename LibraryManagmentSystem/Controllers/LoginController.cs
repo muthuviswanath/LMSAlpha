@@ -17,12 +17,14 @@ namespace LibraryManagmentSystem.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly LibraryManagementContext _context;
         private readonly IBooksRepository _book;
+        private readonly IAccountsRepository _user;
 
-        public LoginController(ILogger<HomeController> logger, LibraryManagementContext context, IBooksRepository book)
+        public LoginController(ILogger<HomeController> logger, LibraryManagementContext context, IBooksRepository book, IAccountsRepository user)
         {
             _logger = logger;
             _context = context;
             _book = book;
+            _user = user;
         }
 
         public IActionResult Login()
@@ -43,22 +45,34 @@ namespace LibraryManagmentSystem.Controllers
         [HttpPost]
         public IActionResult Login(string uname, string psd)
         {
-            if (uname != null && psd != null && uname.Equals("admin") && psd.Equals("admin"))
+            if(uname != null && psd != null)
             {
-                HttpContext.Session.SetString("username", uname);
-                return RedirectToAction("AllLendRequest", "LendRequest");
-            }
-            else if (uname != null && psd != null && uname.Equals("John") && psd.Equals("password"))
-            {
-                HttpContext.Session.SetString("username", uname);
-                return RedirectToAction("AllBooksList", "Books");
-                //return View("Search");
+                var user  = _user.GetUserbyName(uname);
+                
+
+                if (uname.Equals("admin") && psd.Equals("admin"))
+                {
+                    HttpContext.Session.SetString("username", uname);
+                    return RedirectToAction("AllLendRequest", "LendRequest");
+                }
+                else if (uname.Equals(user.UserName) && psd.Equals(user.Password))
+                {
+                    HttpContext.Session.SetString("username", uname);
+                    return RedirectToAction("AllBooksList", "Books");
+                    //return View("Search");
+                }
+                else
+                {
+                    ViewBag.error = "Invalid Credentials. Check again.";
+                    return View("Index");
+                }
             }
             else
             {
                 ViewBag.error = "Invalid Credentials. Check again.";
                 return View("Index");
             }
+
         }
 
         public async Task<IActionResult> Index(string SearchString)

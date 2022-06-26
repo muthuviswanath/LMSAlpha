@@ -24,6 +24,22 @@ namespace LibraryManagmentSystem.Models
                     Password="alpha",
                     Role ="Student"
                 });
+            modelBuilder.Entity<AccountsInfo>().HasData(
+                new AccountsInfo
+                {
+                    UserId = 2,
+                    UserName = "admin",
+                    Password = "admin",
+                    Role = "Librarian"
+                });
+            modelBuilder.Entity<AccountsInfo>().HasData(
+                new AccountsInfo
+                {
+                    UserId = 3,
+                    UserName = "John",
+                    Password = "password",
+                    Role = "Student"
+                });
 
             modelBuilder.Entity<AuthorInfo>().HasData(
                 new AuthorInfo

@@ -34,6 +34,7 @@ namespace LibraryManagmentSystem
             services.AddScoped<IAuthorRepository, AuthorRepository>();
             services.AddScoped<IPublisherRepository, PublisherRepository>();
             services.AddScoped<ILendRequestRepository, LendRequestRepository>();
+            services.AddScoped<IAccountsRepository, AccountsRepository>();
             //services.AddScoped<BookRequestStatus>(br => BookRequestStatus.RequestList(br));
             services.AddDbContext<LibraryManagementContext>(options =>
             {

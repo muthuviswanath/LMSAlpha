@@ -19,8 +19,15 @@ using LibraryManagmentSystem.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "E:\LMSAlpha\LibraryManagmentSystem\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Http;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"36d5914797951a4e1ec853c84bf28f73dd4fed6f", @"/Views/LendRequest/ReturnView.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8fc1187f0828b3657e34845ad9b7c89383f04e7c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"06ed63fcf584b27fa2d42a455dd3bf05997e2746", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_LendRequest_ReturnView : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<LibraryManagmentSystem.Models.LendRequest>>
     #nullable disable
@@ -79,7 +86,7 @@ using LibraryManagmentSystem.Models;
                      <div class=""col"">
                         <center>
                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "36d5914797951a4e1ec853c84bf28f73dd4fed6f5386", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "36d5914797951a4e1ec853c84bf28f73dd4fed6f5561", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -166,7 +173,7 @@ using LibraryManagmentSystem.Models;
 #line hidden
 #nullable disable
             WriteLiteral("                                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "36d5914797951a4e1ec853c84bf28f73dd4fed6f9335", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "36d5914797951a4e1ec853c84bf28f73dd4fed6f9510", async() => {
                 WriteLiteral("\r\n                                            <button>Return Book</button>\r\n                                            ");
             }
             );

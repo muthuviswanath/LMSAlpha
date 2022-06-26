@@ -2,20 +2,23 @@
 using LibraryManagmentSystem.Models;
 using System.Linq;
 using System;
+using Microsoft.AspNetCore.Http;
 
 namespace LibraryManagmentSystem.Controllers
 {
     public class LendRequestController : Controller
     {
         private readonly ILendRequestRepository _lendRequestRepository;
-        private readonly IBooksRepository _booksRepository; 
+        private readonly IBooksRepository _booksRepository;
+        private readonly IAccountsRepository _accountsRepository;
         private readonly LibraryManagementContext _libraryManagementContext;
 
-        public LendRequestController(ILendRequestRepository lendRequestRepository, LibraryManagementContext libraryManagementContext, IBooksRepository booksRepository)
+        public LendRequestController(ILendRequestRepository lendRequestRepository, LibraryManagementContext libraryManagementContext, IBooksRepository booksRepository, IAccountsRepository accountsRepository  )
         {
             _lendRequestRepository = lendRequestRepository;
             _libraryManagementContext = libraryManagementContext;
             _booksRepository = booksRepository;
+            _accountsRepository = accountsRepository;   
         }
 
 
@@ -39,14 +42,15 @@ namespace LibraryManagmentSystem.Controllers
         }
         public ViewResult RequestToLend(int bookId)
         {
-            int userId = 1;
+            var username = HttpContext.Session.GetString("username");
+            var user = _accountsRepository.GetUserbyName(username);
             LendRequest lendRequest = new LendRequest
             {
                 LendStatus = "Requested",
-                UserId = userId,
+                UserId = user.UserId,
                 BookId = bookId,
                 LendDate = System.DateTime.MinValue,
-                AccountsInfo = _libraryManagementContext.Accounts.SingleOrDefault(u => u.UserId == userId),
+                AccountsInfo = _libraryManagementContext.Accounts.SingleOrDefault(u => u.UserId == user.UserId),
                 BooksInfo = _libraryManagementContext.Books.SingleOrDefault(b=>b.BookId == bookId)
             }; 
 
@@ -77,9 +81,11 @@ namespace LibraryManagmentSystem.Controllers
             ViewData["Message"] = "Request Declined !!!";
             return RedirectToAction("AllLendRequest");
         }
-        public IActionResult ReturnView(int Userid)
+        public IActionResult ReturnView()
         {
-
+            var username = HttpContext.Session.GetString("username");
+            var user = _accountsRepository.GetUserbyName(username);
+            int Userid = user.UserId;
             var request = _lendRequestRepository.GetlendRequestbyId(Userid).Where(l => l.LendStatus == "Approved"  );
             
              if (request == null)
@@ -102,8 +108,11 @@ namespace LibraryManagmentSystem.Controllers
             
             return View(lendRequest);
         }
-        public IActionResult AllPastBooks(int Userid)
+        public IActionResult AllPastBooks()
         {
+            var username = HttpContext.Session.GetString("username");
+            var user = _accountsRepository.GetUserbyName(username);
+            int Userid = user.UserId;
 
             var request = _lendRequestRepository.GetlendRequestbyId(Userid).Where(l => l.LendStatus == "Returned" || l.LendStatus == "Declined");
 

@@ -19,8 +19,15 @@ using LibraryManagmentSystem.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "E:\LMSAlpha\LibraryManagmentSystem\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Http;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"669fe62d821f3dc3c34f3d353b437ba852e579fe", @"/Views/Shared/_BookCard.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8fc1187f0828b3657e34845ad9b7c89383f04e7c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"06ed63fcf584b27fa2d42a455dd3bf05997e2746", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared__BookCard : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<BooksInfo>
     #nullable disable
@@ -108,7 +115,7 @@ WriteAttributeValue("", 192, Model.BookTitle, 192, 16, false);
 #line hidden
 #nullable disable
             WriteLiteral("<br/>\r\n\t\t\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "669fe62d821f3dc3c34f3d353b437ba852e579fe6822", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "669fe62d821f3dc3c34f3d353b437ba852e579fe6997", async() => {
                 WriteLiteral("\r\n");
 #nullable restore
 #line 12 "E:\LMSAlpha\LibraryManagmentSystem\Views\Shared\_BookCard.cshtml"
@@ -119,7 +126,7 @@ WriteAttributeValue("", 192, Model.BookTitle, 192, 16, false);
 #line hidden
 #nullable disable
                 WriteLiteral("\t\t\t\t\t");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "669fe62d821f3dc3c34f3d353b437ba852e579fe7344", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "669fe62d821f3dc3c34f3d353b437ba852e579fe7519", async() => {
                     WriteLiteral("Request to Borrow");
                 }
                 );

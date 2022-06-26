@@ -49,6 +49,20 @@ namespace LibraryManagmentSystem.Migrations
                             Password = "alpha",
                             Role = "Student",
                             UserName = "Team Alpha"
+                        },
+                        new
+                        {
+                            UserId = 2,
+                            Password = "admin",
+                            Role = "Librarian",
+                            UserName = "admin"
+                        },
+                        new
+                        {
+                            UserId = 3,
+                            Password = "password",
+                            Role = "Student",
+                            UserName = "John"
                         });
                 });
 
