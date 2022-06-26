@@ -47,8 +47,12 @@ namespace LibraryManagmentSystem.Controllers
         {
             if(uname != null && psd != null)
             {
-                var user  = _user.GetUserbyName(uname);
-                
+                var user  = _user.GetUserbyName(uname);                
+                if (user == null)
+                {
+                    ViewBag.error = "Invalid Credentials. Check again.";
+                    return View("Login");
+                }              
 
                 if (uname.Equals("admin") && psd.Equals("admin"))
                 {
