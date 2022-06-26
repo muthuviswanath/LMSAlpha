@@ -111,12 +111,7 @@ namespace LibraryManagmentSystem.Controllers
         }
         public IActionResult AllPastBooks()
         {
-            var username = HttpContext.Session.GetString("username");
-            var user = _accountsRepository.GetUserbyName(username);
-            int Userid = user.UserId;
-
-            var request = _lendRequestRepository.GetlendRequestbyId(Userid).Where(l => l.LendStatus == "Returned" || l.LendStatus == "Declined");
-
+            var request = _lendRequestRepository.GetPastRecord;
             if (request == null)
             {
                 return NotFound();

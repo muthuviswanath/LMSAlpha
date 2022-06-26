@@ -35,5 +35,12 @@ namespace LibraryManagmentSystem.Models
                 return _libraryManagementContext.LendRequests.Include(b => b.BooksInfo).Include(u => u.AccountsInfo).Where(l => l.LendStatus == "Approved");
             }
         }
+        public IEnumerable<LendRequest> GetPastRecord
+        {
+            get
+            {
+                return _libraryManagementContext.LendRequests.Include(b => b.BooksInfo).Include(u => u.AccountsInfo).Where(l => l.LendStatus == "Returned" || l.LendStatus == "Declined");
+            }
+        }
     }
 }
