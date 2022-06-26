@@ -30,10 +30,11 @@ namespace LibraryManagmentSystem.Controllers
             return View(_lendRequestRepository.GetAllLendRequest);
         }
        
-        public IActionResult LendRequestById(int Userid)
+        public IActionResult LendRequestById()
         {
-
-            var request = _lendRequestRepository.GetlendRequestbyId(Userid);
+            var username = HttpContext.Session.GetString("username");
+            var user = _accountsRepository.GetUserbyName(username);
+            var request = _lendRequestRepository.GetlendRequestbyId(user.UserId);
             if(request == null)
             {
                 return NotFound();
