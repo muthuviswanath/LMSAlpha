@@ -99,8 +99,7 @@ namespace LibraryManagmentSystem.Controllers
         {
             LendRequest lendRequest = _lendRequestRepository.GetLendRequestByLendId(lendId);
             lendRequest.LendStatus = "Returned";
-            lendRequest.BooksInfo.IssuedBooks--;
-            lendRequest.ReturnDate= DateTime.Now;
+            lendRequest.BooksInfo.IssuedBooks--;            
             DateTime date = DateTime.Now;
             int diff = (int)(date - lendRequest.ReturnDate).TotalDays;
             lendRequest.FineAmount = diff * 10;
