@@ -50,11 +50,12 @@ namespace LibraryManagmentSystem.Controllers
                 LendStatus = "Requested",
                 UserId = user.UserId,
                 BookId = bookId,
-                LendDate = System.DateTime.MinValue,
+                LendDate = System.DateTime.Now,
                 AccountsInfo = _libraryManagementContext.Accounts.SingleOrDefault(u => u.UserId == user.UserId),
                 BooksInfo = _libraryManagementContext.Books.SingleOrDefault(b=>b.BookId == bookId)
-            }; 
+            };
 
+            lendRequest.BooksInfo.IssuedBooks++;
             _libraryManagementContext.LendRequests.Add(lendRequest);
             _libraryManagementContext.SaveChanges();
             return View("Requested");
@@ -65,7 +66,6 @@ namespace LibraryManagmentSystem.Controllers
             lendRequest.LendStatus = "Approved";
             lendRequest.LendDate = DateTime.Now;
             System.DateTime Date = DateTime.Now;
-            lendRequest.BooksInfo.IssuedBooks++;
             lendRequest.ReturnDate = Date.AddDays(15);
            
             _libraryManagementContext.SaveChanges();

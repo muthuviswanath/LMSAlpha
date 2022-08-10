@@ -19,7 +19,7 @@ namespace LibraryManagmentSystem.Models
         public string Category { get; set; }
         public string ImageURl { get; set; }
         public int IssuedBooks { get; set; } = 0;
-        public bool IsAvailable { get; set; } 
+        public bool IsAvailable { get; set; } = true;
         
         public BooksInfo()
         {

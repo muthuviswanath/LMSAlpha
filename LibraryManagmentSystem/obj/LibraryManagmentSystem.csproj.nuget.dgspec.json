@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj": {}
+    "C:\\Users\\muthu\\Desktop\\Desktop Data Till June 2022\\LMSAlpha\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj": {}
   },
   "projects": {
-    "E:\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj": {
+    "C:\\Users\\muthu\\Desktop\\Desktop Data Till June 2022\\LMSAlpha\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
+        "projectUniqueName": "C:\\Users\\muthu\\Desktop\\Desktop Data Till June 2022\\LMSAlpha\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
         "projectName": "LibraryManagmentSystem",
-        "projectPath": "E:\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "E:\\LMSAlpha\\LibraryManagmentSystem\\obj\\",
+        "projectPath": "C:\\Users\\muthu\\Desktop\\Desktop Data Till June 2022\\LMSAlpha\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
+        "packagesPath": "C:\\Users\\muthu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\muthu\\Desktop\\Desktop Data Till June 2022\\LMSAlpha\\LMSAlpha\\LibraryManagmentSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\muthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,6 +44,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.Build": {
+              "target": "Package",
+              "version": "[17.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.17, )"
@@ -92,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
