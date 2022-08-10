@@ -24,6 +24,7 @@ namespace LibraryManagmentSystem.Controllers
             _publisherRepository = publisherRepository;
             _context = context;
         }
+        //comments
         public IActionResult AllBooksList()
         {
             return View(_booksRepository.GetAllBooks);
