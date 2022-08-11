@@ -78,6 +78,11 @@ namespace LibraryManagmentSystem.Controllers
             }
 
         }
+        public IActionResult Logout() {
+            HttpContext.Session.Remove("username");
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
+        }
 
         public async Task<IActionResult> Index(string SearchString)
         {
