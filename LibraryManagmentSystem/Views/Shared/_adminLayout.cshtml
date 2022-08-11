@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a asp-controller="LendRequest" asp-action="AllLendRequest" class="nav-link active" aria-current="page" >Hello, Admin</a>
+                  <a asp-controller="LendRequest" asp-action="AllLendRequest" class="nav-link active" aria-current="page" >Hello,@Context.Session.GetString("username")</a>
                 </li>     
                 
               </ul>

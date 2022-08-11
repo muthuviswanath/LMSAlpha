@@ -22,6 +22,7 @@ namespace LibraryManagmentSystem.Controllers
         public async Task<IActionResult> Index()
         {
             var libraryManagementContext = _context.Books.Include(b => b.AuthorInfo).Include(b => b.PublisherInfo);
+            
             return View(await libraryManagementContext.ToListAsync());
         }
 
@@ -48,8 +49,9 @@ namespace LibraryManagmentSystem.Controllers
         // GET: BooksInfoes/Create
         public IActionResult Create()
         {
-            ViewData["AuthorId"] = new SelectList(_context.Authors, "AuthorId", "AuthorId");
-            ViewData["PublisherId"] = new SelectList(_context.Publishers, "PublisherId", "PublisherId");
+            ViewData["AuthorId"] = new SelectList(_context.Authors, "AuthorId", "AuthorName");
+
+            ViewData["PublisherId"] = new SelectList(_context.Publishers, "PublisherId", "PublisherName");
             return View();
         }
 
@@ -60,6 +62,8 @@ namespace LibraryManagmentSystem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("BookId,BookTitle,NoOfCopies,AuthorId,PublisherId,Category,ImageURl,IssuedBooks,IsAvailable")] BooksInfo booksInfo)
         {
+
+
             if (ModelState.IsValid)
             {
                 _context.Add(booksInfo);
@@ -67,6 +71,7 @@ namespace LibraryManagmentSystem.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AuthorId"] = new SelectList(_context.Authors, "AuthorId", "AuthorId", booksInfo.AuthorId);
+
             ViewData["PublisherId"] = new SelectList(_context.Publishers, "PublisherId", "PublisherId", booksInfo.PublisherId);
             return View(booksInfo);
         }

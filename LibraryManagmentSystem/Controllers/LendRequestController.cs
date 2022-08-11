@@ -45,6 +45,9 @@ namespace LibraryManagmentSystem.Controllers
         {
             var username = HttpContext.Session.GetString("username");
             var user = _accountsRepository.GetUserbyName(username);
+
+
+            
             LendRequest lendRequest = new LendRequest
             {
                 LendStatus = "Requested",
@@ -102,6 +105,7 @@ namespace LibraryManagmentSystem.Controllers
             lendRequest.BooksInfo.IssuedBooks--;            
             DateTime date = DateTime.Now;
             int diff = (int)(date - lendRequest.ReturnDate).TotalDays;
+            if (diff < 0) diff = 0;
             lendRequest.FineAmount = diff * 10;
             _libraryManagementContext.SaveChanges();
             ViewData["Message"] = "Book Returned !!!";
