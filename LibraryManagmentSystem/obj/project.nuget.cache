@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LH1+9mu4hI2XlJvgGQwI+WeH16VwiQFBnrioIZWUdQfGlBk3OVqkDQJOcPJpq1xevX+2nXLdjdK9Cs2l1h6BGA==",
+  "dgSpecHash": "YG3XgH9JbVBmD2ucaxjQmxIItKo4cUZdCyR33HjO1Mr0ZuFyIirP5MgsD2OvhoaIbKktWeQ8XRWk2KWy/C/9Gg==",
   "success": true,
   "projectFilePath": "C:\\Users\\muthu\\Desktop\\Desktop Data Till June 2022\\LMSAlpha\\LMSAlpha\\LibraryManagmentSystem\\LibraryManagmentSystem.csproj",
   "expectedPackageFiles": [
@@ -141,7 +141,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.Build 17.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.Build 17.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.Build",
       "targetGraphs": [
         "net5.0"
@@ -151,7 +151,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.IO.Redist 6.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.IO.Redist 6.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.IO.Redist",
       "targetGraphs": [
         "net5.0"

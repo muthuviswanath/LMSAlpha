@@ -17,6 +17,7 @@ namespace LibraryManagmentSystem.Controllers
         private readonly IAuthorRepository _authorRepository;
         private readonly IPublisherRepository _publisherRepository;
         private readonly LibraryManagementContext _context;
+        private readonly ILendRequestRepository _lendRequestRepository;
         public BooksController(IBooksRepository booksRepository, IAuthorRepository authorRepository,IPublisherRepository publisherRepository, LibraryManagementContext context)
         {
             _booksRepository = booksRepository;
@@ -26,7 +27,8 @@ namespace LibraryManagmentSystem.Controllers
         }
         //comments
         public IActionResult AllBooksList()
-        {
+        {   
+            
             return View(_booksRepository.GetAllBooks);
         }
         public IActionResult Error()

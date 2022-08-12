@@ -6,5 +6,7 @@ namespace LibraryManagmentSystem.Models
         IEnumerable<BooksInfo> GetAllBooks { get; }
         IEnumerable<BooksInfo> GetBooksAvailable { get; } 
         BooksInfo GetBookbyName(string name);
+
+        BooksInfo GetBookbyId(int bookId);
     }
 }

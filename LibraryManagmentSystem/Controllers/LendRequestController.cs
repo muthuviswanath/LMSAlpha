@@ -47,6 +47,7 @@ namespace LibraryManagmentSystem.Controllers
             var user = _accountsRepository.GetUserbyName(username);
 
 
+
             
             LendRequest lendRequest = new LendRequest
             {
@@ -61,6 +62,7 @@ namespace LibraryManagmentSystem.Controllers
             lendRequest.BooksInfo.IssuedBooks++;
             _libraryManagementContext.LendRequests.Add(lendRequest);
             _libraryManagementContext.SaveChanges();
+            ViewBag.LendInfo = lendRequest;
             return View("Requested");
         }
         public RedirectToActionResult Approval(int lendId) 

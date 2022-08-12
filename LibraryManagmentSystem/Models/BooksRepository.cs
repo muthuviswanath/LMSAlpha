@@ -24,6 +24,11 @@ namespace LibraryManagmentSystem.Models
             return _libraryManagementContext.Books.FirstOrDefault(b => b.BookTitle == name);
         }
 
+        public BooksInfo GetBookbyId(int bookId)
+        {
+            return _libraryManagementContext.Books.FirstOrDefault(b => b.BookId == bookId);
+        }
+
         public IEnumerable<BooksInfo> GetBooksAvailable
         {
             get
