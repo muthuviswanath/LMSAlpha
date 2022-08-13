@@ -41,13 +41,16 @@ namespace LibraryManagmentSystem.Controllers
             }
             return View(request);
         }
-        public ViewResult RequestToLend(int bookId)
+        public ActionResult RequestToLend(int bookId)
         {
             var username = HttpContext.Session.GetString("username");
             var user = _accountsRepository.GetUserbyName(username);
 
 
-
+            var alreadyrequested = _libraryManagementContext.LendRequests.Where(u => u.UserId == user.UserId && u.BookId == bookId).FirstOrDefault(s => s.LendStatus == "Requested");
+            if (alreadyrequested != null && alreadyrequested.LendStatus == "Requested") {
+                return RedirectToAction("ErrorPage", "Books");
+            }
             
             LendRequest lendRequest = new LendRequest
             {

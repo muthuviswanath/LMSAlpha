@@ -35,6 +35,10 @@ namespace LibraryManagmentSystem.Controllers
         {
             return View(new ErrorViewModel { IsBookAvailable = false });
         }
+
+        public ViewResult ErrorPage() {
+            return View();
+        }
         public async Task<IActionResult> Search(string SearchString)
         {
             var books = from b in _context.Books

@@ -1,0 +1,17 @@
+﻿@{
+	ViewData["Title"] = "Error";
+	Layout = "~/Views/Shared/_userLayout.cshtml";
+}
+<style>
+	a,h1,h3{
+		color: red;
+		text-decoration: none;
+	}
+</style>
+  <center>
+<h1>Sorry,</h1>
+<h3>This book is already requested by you :( <br/>
+	You can request for a <a asp-controller="Books" asp-action="AllBooksList">New Book</a>
+</h3>
+<br /><br />
+</center>

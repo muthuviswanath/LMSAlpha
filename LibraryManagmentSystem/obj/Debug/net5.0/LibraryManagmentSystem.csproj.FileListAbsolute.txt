@@ -990,3 +990,4 @@ C:\Users\muthu\Desktop\Desktop Data Till June 2022\LMSAlpha\LMSAlpha\LibraryMana
 C:\Users\muthu\Desktop\Desktop Data Till June 2022\LMSAlpha\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\LibraryManagmentSystem.pdb
 C:\Users\muthu\Desktop\Desktop Data Till June 2022\LMSAlpha\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\LibraryManagmentSystem.genruntimeconfig.cache
 C:\Users\muthu\Desktop\Desktop Data Till June 2022\LMSAlpha\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\ref\LibraryManagmentSystem.dll
+C:\Users\muthu\Desktop\Desktop Data Till June 2022\LMSAlpha\LMSAlpha\LibraryManagmentSystem\obj\Debug\net5.0\Razor\Views\Books\ErrorPage.cshtml.g.cs
