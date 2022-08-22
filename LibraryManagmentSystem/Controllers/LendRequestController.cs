@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using LibraryManagmentSystem.Models;
 using System.Linq;
+using System;
 
 namespace LibraryManagmentSystem.Controllers
 {
@@ -57,8 +58,8 @@ namespace LibraryManagmentSystem.Controllers
         {
             LendRequest lendRequest = _lendRequestRepository.GetLendRequestByLendId(lendId);
             lendRequest.LendStatus = "Approved";
-            lendRequest.LendDate = System.DateTime.Now;
-            System.DateTime Date = System.DateTime.Now;
+            lendRequest.LendDate = DateTime.Now;
+            System.DateTime Date = DateTime.Now;
             lendRequest.BooksInfo.IssuedBooks++;
             lendRequest.ReturnDate = Date.AddDays(15);
            
@@ -70,8 +71,8 @@ namespace LibraryManagmentSystem.Controllers
         {
             LendRequest lendRequest = _lendRequestRepository.GetLendRequestByLendId(lendId);
             lendRequest.LendStatus = "Declined";
-            lendRequest.LendDate = System.DateTime.Now;
-            lendRequest.ReturnDate = System.DateTime.Now;
+            lendRequest.LendDate = DateTime.Now;
+            lendRequest.ReturnDate = DateTime.Now;
             _libraryManagementContext.SaveChanges();
             ViewData["Message"] = "Request Declined !!!";
             return RedirectToAction("AllLendRequest");
@@ -87,16 +88,18 @@ namespace LibraryManagmentSystem.Controllers
             }
             return View(request);
         }
-        public RedirectToActionResult ReturnBook(int lendId)
+        public ViewResult ReturnBook(int lendId)
         {
             LendRequest lendRequest = _lendRequestRepository.GetLendRequestByLendId(lendId);
             lendRequest.LendStatus = "Returned";
             lendRequest.BooksInfo.IssuedBooks--;
-
+            DateTime date = DateTime.Now;
+            int diff = (int)(date - lendRequest.ReturnDate).TotalDays;
+            lendRequest.FineAmount = diff * 10;
             _libraryManagementContext.SaveChanges();
             ViewData["Message"] = "Book Returned !!!";
-
-            return RedirectToAction("ReturnView", new { Userid =1});
+            
+            return View(lendRequest);
         }
         public IActionResult AllPastBooks(int Userid)
         {

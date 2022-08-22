@@ -26,7 +26,6 @@
                                 <tr>
                                     <td>Lend Id </td>
                                     <td>User Name </td>
-                                    <td>Book Id</td>
                                     <td>Book Name</td>
                                     <td>Status</td>
                                 </tr>
@@ -36,8 +35,7 @@
                                 {
                                     <tr>
                                         <td>@request.LendId</td>
-                                        <td>@request.UserId</td>
-                                        <td>@request.BookId</td>
+                                        <td>@request.AccountsInfo.UserName</td>
                                         <td>@request.BooksInfo.BookTitle</td>
                                         <td>@request.LendStatus</td>
                                     </tr>

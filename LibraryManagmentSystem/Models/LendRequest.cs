@@ -17,6 +17,7 @@ namespace LibraryManagmentSystem.Models
         public int BookId { get; set; }
         [ForeignKey("BookId")]
         public BooksInfo BooksInfo { get; set; }
+        public double? FineAmount { get; set; }
 
     }
 }

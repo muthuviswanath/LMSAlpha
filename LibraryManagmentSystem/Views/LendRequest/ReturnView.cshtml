@@ -23,7 +23,6 @@
                             <thead>
                                 <tr>
                                 <td>Lend Id </td>
-                                <td>Book Id</td>
                                 <td>Book Name</td>
                                 <td>Lend Date</td>
                                 <td>Return Date</td>
@@ -35,7 +34,6 @@
                                 {
                                     <tr>
                                         <td>@list.LendId</td>
-                                        <td>@list.BookId</td>
                                         <td>@list.BooksInfo.BookTitle</td>
                                         <td>@list.LendDate</td>
                                         <td>@list.ReturnDate</td>
@@ -46,7 +44,6 @@
                                             <form asp-controller="LendRequest" asp-action="ReturnBook" asp-route-lendId="@list.LendId">
                                             <button>Return Book</button>
                                             </form>
-                                               
                                             }
                                             else
                                             {

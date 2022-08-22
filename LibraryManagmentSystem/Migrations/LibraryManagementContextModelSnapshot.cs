@@ -210,6 +210,9 @@ namespace LibraryManagmentSystem.Migrations
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
+                    b.Property<double?>("FineAmount")
+                        .HasColumnType("float");
+
                     b.Property<DateTime>("LendDate")
                         .HasColumnType("datetime2");
 

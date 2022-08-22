@@ -23,10 +23,10 @@
                             <thead>
                                 <tr>
                                 <td>Lend Id </td>
-                                <td>Book Id</td>
                                 <td>Book Name</td>
                                 <td>Lend Date</td>
                                 <td>Return Date</td>
+                                <td>Fine Amount</td>
                                 <td>Status</td>
                                 </tr>
                             </thead>
@@ -35,11 +35,18 @@
                                 {
                                     <tr>
                                         <td>@list.LendId</td>
-                                        <td>@list.BookId</td>
                                         <td>@list.BooksInfo.BookTitle</td>
                                         <td>@list.LendDate</td>
                                         <td>@list.ReturnDate</td>
-                                        
+                                        @if(list.FineAmount > 0)
+                                            {
+                                                <td>@list.FineAmount</td>
+                                            }
+                                            else
+                                            {
+                                                <td> </td>
+                                            }
+
                                         <td>
                                         
                                                @list.LendStatus
